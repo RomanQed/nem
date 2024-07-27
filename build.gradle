@@ -1,0 +1,87 @@
+import java.text.SimpleDateFormat
+
+buildscript {
+    repositories {
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+
+version = '1.0'
+group = 'com.github.romanqed.nem'
+archivesBaseName = 'nem'
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+
+minecraft {
+    mappings channel: 'snapshot', version: '20171003-1.12'
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+
+        server {
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+            property 'forge.logging.console.level', 'debug'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url = "https://www.cursemaven.com"
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    compile files("libs/ic2-2.8.218-ex112-dev.jar")
+}
+
+jar {
+    manifest {
+        attributes(
+                'Created-By': String.format("%s (%s %s)",
+                        System.getProperty("java.version"),
+                        System.getProperty("java.vm.vendor"),
+                        System.getProperty("java.vm.version")),
+                'Gradle-Version': "Gradle $gradle.gradleVersion",
+                'Build-Date': new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
+                'Build-Time': new SimpleDateFormat("HH:mm:ss.SSSZ").format(new Date()),
+                'Built-By': 'Roman Bakaldin',
+                "Specification-Title": "nem",
+                "Specification-Vendor": "github.com/romanqed",
+                "Specification-Version": "1",
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor": "github.com/romanqed",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        )
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file:///${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
