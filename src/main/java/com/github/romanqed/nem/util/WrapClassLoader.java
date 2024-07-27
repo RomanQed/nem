@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 
-public class WrapClassLoader implements DefineLoader {
+public final class WrapClassLoader implements DefineLoader {
     private static final Method DEFINE_METHOD = findDefineMethod();
 
     private final ClassLoader body;

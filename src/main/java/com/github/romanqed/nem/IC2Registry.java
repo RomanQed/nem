@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod.EventBusSubscriber(modid = NemMod.MODID)
-public class IC2Registry {
+public final class IC2Registry {
 
     @SubscribeEvent
     public static void onTeBlockInit(TeBlockFinalCallEvent event) {

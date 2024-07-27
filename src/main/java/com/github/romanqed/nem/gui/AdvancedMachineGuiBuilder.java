@@ -11,7 +11,7 @@ import org.xml.sax.SAXException;
 
 import java.util.*;
 
-public class AdvancedMachineGuiBuilder implements GuiBuilder {
+public final class AdvancedMachineGuiBuilder implements GuiBuilder {
     private static final String DEFAULT_NAME = "%name%";
     private static final String SLOT_STYLE_NAME = "normal";
     private static final SlotStyle SLOT_STYLE = SlotStyle.Normal;

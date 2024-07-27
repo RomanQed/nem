@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
         name = NemMod.NAME,
         version = NemMod.VERSION,
         dependencies = "required-after:ic2;after:*")
-public class NemMod {
+public final class NemMod {
     public static final String MODID = "nem";
     public static final String NAME = "Not Enough Machines";
     public static final String VERSION = "1.0";
