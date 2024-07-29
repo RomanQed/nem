@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nem:blocks/common/back",
+    "down": "nem:blocks/common/bottomtop",
+    "up": "nem:blocks/common/top_active",
+    "north": "nem:blocks/roller/front",
+    "east": "nem:blocks/common/leftright_active",
+    "south": "nem:blocks/common/back",
+    "west": "nem:blocks/common/leftright_active"
+  }
+}

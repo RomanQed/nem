@@ -1,0 +1,32 @@
+itemGroup.nem=Not Enough Machines
+
+nem.machine.advanced_furnace3=Smelting machine
+nem.machine.advanced_furnace6=Advanced smelting machine
+nem.machine.advanced_furnace9=Improved smelting machine
+
+nem.machine.advanced_macerator3=Crush machine
+nem.machine.advanced_macerator6=Advanced crush machine
+nem.machine.advanced_macerator9=Improved crush machine
+
+nem.machine.advanced_extractor3=Extractive machine
+nem.machine.advanced_extractor6=Advanced extractive machine
+nem.machine.advanced_extractor9=Improved extractive machine
+
+nem.machine.advanced_cutter3=Cutting machine
+nem.machine.advanced_cutter6=Advanced cutting machine
+nem.machine.advanced_cutter9=Improved cutting machine
+
+nem.machine.advanced_extruder3=Pressure machine
+nem.machine.advanced_extruder6=Advanced pressure machine
+nem.machine.advanced_extruder9=Improved pressure machine
+
+nem.machine.advanced_roller3=Rolling machine
+nem.machine.advanced_roller6=Advanced rolling machine
+nem.machine.advanced_roller9=Improved rolling machine
+
+nem.machine.advanced_compressor3=Compression machine
+nem.machine.advanced_compressor6=Advanced compression machine
+nem.machine.advanced_compressor9=Improved compression machine
+
+nem.generator.advanced_kinetic_generator=Advanced kinetic generator
+nem.generator.super_kinetic_generator=Improved kinetic generator
