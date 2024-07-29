@@ -1,5 +1,6 @@
 package com.github.romanqed.nem;
 
+import com.github.romanqed.nem.config.NemConfig;
 import ic2.api.event.TeBlockFinalCallEvent;
 import ic2.core.block.BlockTileEntity;
 import ic2.core.block.ITeBlock;
@@ -16,8 +17,12 @@ public final class IC2Registry {
 
     @SubscribeEvent
     public static void onTeBlockInit(TeBlockFinalCallEvent event) {
-        register(NemMachine.class, NemMachine.IDENTIFIER);
-        register(NemGenerator.class, NemGenerator.IDENTIFIER);
+        if (NemConfig.enableMachines) {
+            register(NemMachine.class, NemMachine.IDENTIFIER);
+        }
+        if (NemConfig.enableGenerators) {
+            register(NemGenerator.class, NemGenerator.IDENTIFIER);
+        }
     }
 
     private static <E extends Enum<E> & ITeBlock> void register(Class<E> type, ResourceLocation location) {

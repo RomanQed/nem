@@ -1,7 +1,10 @@
 package com.github.romanqed.nem;
 
+import com.github.romanqed.nem.config.NemConfig;
 import ic2.core.block.BlockTileEntity;
+import ic2.core.block.ITeBlock;
 import ic2.core.block.TeBlockRegistry;
+import ic2.core.ref.TeBlock;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,17 +23,24 @@ public final class NemMod {
 
     private static Logger logger;
 
-    private static void setCreativeTabIcon(NemMachine machine) {
-        BlockTileEntity teBlock = TeBlockRegistry.get(NemMachine.IDENTIFIER);
-        CREATIVE_TAB.setTabIconItemStack(teBlock.getItemStack(machine));
+    private static void setCreativeTabIcon(ITeBlock block) {
+        BlockTileEntity teBlock = TeBlockRegistry.get(block.getIdentifier());
+        CREATIVE_TAB.setTabIconItemStack(teBlock.getItemStack(block));
     }
 
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-        logger = event.getModLog();
+    private static void registerMachines() {
+        if (!NemConfig.enableMachines) {
+            return;
+        }
         for (NemMachine block : NemMachine.values()) {
             logger.debug("Register tile entity for {}", block);
             block.registerTileEntity();
+        }
+    }
+
+    private static void registerGenerators() {
+        if (!NemConfig.enableGenerators) {
+            return;
         }
         for (NemGenerator block : NemGenerator.values()) {
             logger.debug("Register tile entity for {}", block);
@@ -38,16 +48,47 @@ public final class NemMod {
         }
     }
 
-    @EventHandler
-    public void init(FMLInitializationEvent event) {
+    private static void initMachines() {
+        if (!NemConfig.enableMachines) {
+            return;
+        }
         for (NemMachine machine : NemMachine.values()) {
             logger.debug("Build dummy te for {}", machine);
             machine.buildDummyTe();
+        }
+    }
+
+    private static void initGenerators() {
+        if (!NemConfig.enableGenerators) {
+            return;
         }
         for (NemGenerator generator : NemGenerator.values()) {
             logger.debug("Build dummy te for {}", generator);
             generator.buildDummyTe();
         }
-        setCreativeTabIcon(NemMachine.ADVANCED_FURNACE3);
+    }
+
+    private static ITeBlock selectIcon() {
+        if (NemConfig.enableMachines) {
+            return NemMachine.ADVANCED_FURNACE3;
+        }
+        if (NemConfig.enableGenerators) {
+            return NemGenerator.ADVANCED_KINETIC_GENERATOR;
+        }
+        return TeBlock.iron_furnace;
+    }
+
+    @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
+        registerMachines();
+        registerGenerators();
+    }
+
+    @EventHandler
+    public void init(FMLInitializationEvent event) {
+        initGenerators();
+        initMachines();
+        setCreativeTabIcon(selectIcon());
     }
 }
