@@ -1,32 +1,32 @@
 itemGroup.nem=Not Enough Machines
 
-nem.machine.advanced_furnace3=
-nem.machine.advanced_furnace6=
-nem.machine.advanced_furnace9=
+nem.machine.advanced_furnace3=Плавильный завод
+nem.machine.advanced_furnace6=Продвинутый плавильный завод
+nem.machine.advanced_furnace9=Улучшенный плавильный завод
 
-nem.machine.advanced_macerator3=
-nem.machine.advanced_macerator6=
-nem.machine.advanced_macerator9=
+nem.machine.advanced_macerator3=Дробильный завод
+nem.machine.advanced_macerator6=Продвинутый дробильный завод
+nem.machine.advanced_macerator9=Улучшенный дробильный завод
 
-nem.machine.advanced_extractor3=
-nem.machine.advanced_extractor6=
-nem.machine.advanced_extractor9=
+nem.machine.advanced_extractor3=Экстрактивный завод
+nem.machine.advanced_extractor6=Продвинутый экстрактивный завод
+nem.machine.advanced_extractor9=Улучшенный экстрактивный завод
 
-nem.machine.advanced_cutter3=
-nem.machine.advanced_cutter6=
-nem.machine.advanced_cutter9=
+nem.machine.advanced_cutter3=Резочный завод
+nem.machine.advanced_cutter6=Продвинутый резочный завод
+nem.machine.advanced_cutter9=Улучшенный резочный завод
 
-nem.machine.advanced_extruder3=
-nem.machine.advanced_extruder6=
-nem.machine.advanced_extruder9=
+nem.machine.advanced_extruder3=Давильный завод
+nem.machine.advanced_extruder6=Продвинутый давильный завод
+nem.machine.advanced_extruder9=Улучшенный давильный завод
 
-nem.machine.advanced_roller3=
-nem.machine.advanced_roller6=
-nem.machine.advanced_roller9=
+nem.machine.advanced_roller3=Прокатный завод
+nem.machine.advanced_roller6=Продвинутый прокатный завод
+nem.machine.advanced_roller9=Улучшенный прокатный завод
 
-nem.machine.advanced_compressor3=
-nem.machine.advanced_compressor6=
-nem.machine.advanced_compressor9=
+nem.machine.advanced_compressor3=Сжимательный завод
+nem.machine.advanced_compressor6=Продвинутый сжимательный завод
+nem.machine.advanced_compressor9=Улучшенный сжимательный завод
 
-nem.generator.advanced_kinetic_generator=
-nem.generator.super_kinetic_generator=
+nem.generator.advanced_kinetic_generator=Продвинутый кинетический генератор
+nem.generator.super_kinetic_generator=Улучшенный кинетический генератор
