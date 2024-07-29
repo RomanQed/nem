@@ -29,7 +29,7 @@ public final class IC2Registry {
         TeBlockRegistry.addAll(type, location);
         TeBlockRegistry.addCreativeRegisterer(
                 (list, block, item, tab) -> registerCreativeTab(list, block, tab),
-                NemMachine.IDENTIFIER
+                location
         );
     }
 
