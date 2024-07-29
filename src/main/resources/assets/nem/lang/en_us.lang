@@ -1,8 +1,8 @@
 itemGroup.nem=Not Enough Machines
 
-nem.machine.advanced_furnace3=Smelter
-nem.machine.advanced_furnace6=Advanced smelter
-nem.machine.advanced_furnace9=Improved smelter
+nem.machine.advanced_furnace3=Smelting machine
+nem.machine.advanced_furnace6=Advanced smelting machine
+nem.machine.advanced_furnace9=Improved smelting machine
 
 nem.machine.advanced_macerator3=Crush machine
 nem.machine.advanced_macerator6=Advanced crush machine
