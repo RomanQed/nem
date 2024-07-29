@@ -1,12 +1,23 @@
 package com.github.romanqed.nem;
 
-import com.github.romanqed.nem.generator.AdvancedMachineGenerator;
-import com.github.romanqed.nem.generator.MachineGenerator;
+import com.github.romanqed.nem.config.NemConfig;
 import com.github.romanqed.nem.machine.*;
+import com.github.romanqed.nem.util.AdvancedMachineGenerator;
+import com.github.romanqed.nem.util.TileClassGenerator;
 import ic2.core.block.TileEntityBlock;
 
 public final class MachineUtil {
-    private static final MachineGenerator GENERATOR = new AdvancedMachineGenerator(MachineUtil.class);
+    public static final int FURNACE_LENGTH = 100;
+    public static final int MACERATOR_LENGTH = 300;
+    public static final int EXTRACTOR_LENGTH = 300;
+    public static final int FORMER_LENGTH = 200;
+    public static final int COMPRESSOR_LENGTH = 300;
+    public static final int FURNACE_ENERGY = 3;
+    public static final int MACERATOR_ENERGY = 2;
+    public static final int EXTRACTOR_ENERGY = 2;
+    public static final int FORMER_ENERGY = 10;
+    public static final int COMPRESSOR_ENERGY = 2;
+    private static final TileClassGenerator GENERATOR = new AdvancedMachineGenerator(MachineUtil.class);
     private static final String ADVANCED_FURNACE = "AdvancedFurnace";
     private static final String ADVANCED_MACERATOR = "AdvancedMacerator";
     private static final String ADVANCED_EXTRACTOR = "AdvancedExtractor";
@@ -15,27 +26,13 @@ public final class MachineUtil {
     private static final String ADVANCED_ROLLER = "AdvancedRoller";
     private static final String ADVANCED_COMPRESSOR = "AdvancedCompressor";
 
-    public static final double ENERGY_MULTIPLIER = 0.8;
-
-    public static final int FURNACE_LENGTH = 100;
-    public static final int MACERATOR_LENGTH = 300;
-    public static final int EXTRACTOR_LENGTH = 300;
-    public static final int FORMER_LENGTH = 200;
-    public static final int COMPRESSOR_LENGTH = 300;
-
-    public static final int FURNACE_ENERGY = 3;
-    public static final int MACERATOR_ENERGY = 2;
-    public static final int EXTRACTOR_ENERGY = 2;
-    public static final int FORMER_ENERGY = 10;
-    public static final int COMPRESSOR_ENERGY = 2;
-
     private MachineUtil() {
     }
 
     public static int calculateEnergyPerTick(int base, int slots) {
-        return (int) (base * slots * ENERGY_MULTIPLIER);
+        return (int) (base * slots * NemConfig.machineEnergyMultiplier);
     }
-    
+
     public static IC2Tier getTier(int energy) {
         if (energy < 33) {
             return IC2Tier.LOW;

@@ -1,5 +1,7 @@
 package com.github.romanqed.nem;
 
+import com.github.romanqed.nem.generator.AdvancedKineticGenerator;
+import com.github.romanqed.nem.generator.SuperKineticGenerator;
 import ic2.core.block.ITeBlock;
 import ic2.core.block.TileEntityBlock;
 import ic2.core.ref.IC2Material;
@@ -14,43 +16,11 @@ import net.minecraft.util.ResourceLocation;
 import javax.annotation.Nullable;
 import java.util.Set;
 
-public enum NemMachine implements ITeBlock {
-    // Furnaces
-    ADVANCED_FURNACE3(MachineUtil.createFurnace(3), EnumRarity.COMMON),
-    ADVANCED_FURNACE6(MachineUtil.createFurnace(6), EnumRarity.UNCOMMON),
-    ADVANCED_FURNACE9(MachineUtil.createFurnace(9), EnumRarity.RARE),
+public enum NemGenerator implements ITeBlock {
+    ADVANCED_KINETIC_GENERATOR(AdvancedKineticGenerator.class, EnumRarity.UNCOMMON),
+    SUPER_KINETIC_GENERATOR(SuperKineticGenerator.class, EnumRarity.RARE);
 
-    // Macerators
-    ADVANCED_MACERATOR3(MachineUtil.createMacerator(3), EnumRarity.COMMON),
-    ADVANCED_MACERATOR6(MachineUtil.createMacerator(6), EnumRarity.UNCOMMON),
-    ADVANCED_MACERATOR9(MachineUtil.createMacerator(9), EnumRarity.RARE),
-
-    // Extractors
-    ADVANCED_EXTRACTOR3(MachineUtil.createExtractor(3), EnumRarity.COMMON),
-    ADVANCED_EXTRACTOR6(MachineUtil.createExtractor(6), EnumRarity.UNCOMMON),
-    ADVANCED_EXTRACTOR9(MachineUtil.createExtractor(9), EnumRarity.RARE),
-
-    // Cutters
-    ADVANCED_CUTTER3(MachineUtil.createCutter(3), EnumRarity.COMMON),
-    ADVANCED_CUTTER6(MachineUtil.createCutter(6), EnumRarity.UNCOMMON),
-    ADVANCED_CUTTER9(MachineUtil.createCutter(9), EnumRarity.RARE),
-
-    // Extruders
-    ADVANCED_EXTRUDER3(MachineUtil.createExtruder(3), EnumRarity.COMMON),
-    ADVANCED_EXTRUDER6(MachineUtil.createExtruder(6), EnumRarity.UNCOMMON),
-    ADVANCED_EXTRUDER9(MachineUtil.createExtruder(9), EnumRarity.RARE),
-
-    // Rollers
-    ADVANCED_ROLLER3(MachineUtil.createRoller(3), EnumRarity.COMMON),
-    ADVANCED_ROLLER6(MachineUtil.createRoller(6), EnumRarity.UNCOMMON),
-    ADVANCED_ROLLER9(MachineUtil.createRoller(9), EnumRarity.RARE),
-
-    // Compressors
-    ADVANCED_COMPRESSOR3(MachineUtil.createCompressor(3), EnumRarity.COMMON),
-    ADVANCED_COMPRESSOR6(MachineUtil.createCompressor(6), EnumRarity.UNCOMMON),
-    ADVANCED_COMPRESSOR9(MachineUtil.createCompressor(9), EnumRarity.RARE);
-
-    public static final ResourceLocation IDENTIFIER = new ResourceLocation(NemMod.MODID, "machine");
+    public static final ResourceLocation IDENTIFIER = new ResourceLocation(NemMod.MODID, "generator");
 
     private final String name;
     private final Class<? extends TileEntityBlock> teClass;
@@ -60,7 +30,7 @@ public enum NemMachine implements ITeBlock {
     private final TeBlock.DefaultDrop defaultDrop;
     private TileEntityBlock dummyTe;
 
-    NemMachine(Class<? extends TileEntityBlock> teClass, EnumRarity rarity, TeBlock.DefaultDrop drop) {
+    NemGenerator(Class<? extends TileEntityBlock> teClass, EnumRarity rarity, TeBlock.DefaultDrop drop) {
         this.name = name().toLowerCase();
         this.teClass = teClass;
         this.rarity = rarity;
@@ -69,18 +39,18 @@ public enum NemMachine implements ITeBlock {
         this.defaultDrop = drop;
     }
 
-    NemMachine(Class<? extends TileEntityBlock> teClass, EnumRarity rarity) {
-        this(teClass, rarity, TeBlock.DefaultDrop.AdvMachine);
-    }
-
-    @Override
-    public String getName() {
-        return name;
+    NemGenerator(Class<? extends TileEntityBlock> teClass, EnumRarity rarity) {
+        this(teClass, rarity, TeBlock.DefaultDrop.Generator);
     }
 
     @Override
     public int getId() {
         return ordinal();
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -106,7 +76,7 @@ public enum NemMachine implements ITeBlock {
 
     @Override
     public Set<EnumFacing> getSupportedFacings() {
-        return Util.horizontalFacings;
+        return Util.allFacings;
     }
 
     @Override

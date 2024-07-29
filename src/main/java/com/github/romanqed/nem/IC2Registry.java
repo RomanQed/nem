@@ -17,6 +17,7 @@ public final class IC2Registry {
     @SubscribeEvent
     public static void onTeBlockInit(TeBlockFinalCallEvent event) {
         register(NemMachine.class, NemMachine.IDENTIFIER);
+        register(NemGenerator.class, NemGenerator.IDENTIFIER);
     }
 
     private static <E extends Enum<E> & ITeBlock> void register(Class<E> type, ResourceLocation location) {

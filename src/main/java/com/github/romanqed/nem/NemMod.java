@@ -29,6 +29,11 @@ public final class NemMod {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
         for (NemMachine block : NemMachine.values()) {
+            logger.debug("Register tile entity for {}", block);
+            block.registerTileEntity();
+        }
+        for (NemGenerator block : NemGenerator.values()) {
+            logger.debug("Register tile entity for {}", block);
             block.registerTileEntity();
         }
     }
@@ -36,7 +41,12 @@ public final class NemMod {
     @EventHandler
     public void init(FMLInitializationEvent event) {
         for (NemMachine machine : NemMachine.values()) {
+            logger.debug("Build dummy te for {}", machine);
             machine.buildDummyTe();
+        }
+        for (NemGenerator generator : NemGenerator.values()) {
+            logger.debug("Build dummy te for {}", generator);
+            generator.buildDummyTe();
         }
         setCreativeTabIcon(NemMachine.ADVANCED_FURNACE3);
     }

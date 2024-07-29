@@ -1,8 +1,8 @@
-package com.github.romanqed.nem.generator;
+package com.github.romanqed.nem.util;
 
 import ic2.core.block.TileEntityBlock;
 
-public interface MachineGenerator {
+public interface TileClassGenerator {
 
     Class<TileEntityBlock> generate(Class<?> base, String name, Object[] data);
 }
