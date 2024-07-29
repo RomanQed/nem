@@ -33,25 +33,19 @@ public final class MachineUtil {
         return (int) (base * slots * NemConfig.machineEnergyMultiplier);
     }
 
-    public static IC2Tier getTier(int energy) {
-        if (energy < 33) {
-            return IC2Tier.LOW;
-        }
-        if (energy < 129) {
+    public static IC2Tier getTier(int slots) {
+        if (slots <= 3) {
             return IC2Tier.MEDIUM;
         }
-        if (energy < 513) {
+        if (slots <= 6) {
             return IC2Tier.HIGH;
         }
-        if (energy < 2049) {
-            return IC2Tier.EXTREME;
-        }
-        return IC2Tier.INSANE;
+        return IC2Tier.EXTREME;
     }
 
     public static Class<TileEntityBlock> createFurnace(int slots) {
         int energy = calculateEnergyPerTick(FURNACE_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedFurnace.class,
                 ADVANCED_FURNACE + slots,
@@ -61,7 +55,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createMacerator(int slots) {
         int energy = calculateEnergyPerTick(MACERATOR_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedMacerator.class,
                 ADVANCED_MACERATOR + slots,
@@ -71,7 +65,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createExtractor(int slots) {
         int energy = calculateEnergyPerTick(EXTRACTOR_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedExtractor.class,
                 ADVANCED_EXTRACTOR + slots,
@@ -81,7 +75,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createCutter(int slots) {
         int energy = calculateEnergyPerTick(FORMER_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedCutter.class,
                 ADVANCED_CUTTER + slots,
@@ -91,7 +85,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createExtruder(int slots) {
         int energy = calculateEnergyPerTick(FORMER_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedExtruder.class,
                 ADVANCED_EXTRUDER + slots,
@@ -101,7 +95,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createRoller(int slots) {
         int energy = calculateEnergyPerTick(FORMER_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedRoller.class,
                 ADVANCED_ROLLER + slots,
@@ -111,7 +105,7 @@ public final class MachineUtil {
 
     public static Class<TileEntityBlock> createCompressor(int slots) {
         int energy = calculateEnergyPerTick(COMPRESSOR_ENERGY, slots);
-        IC2Tier tier = getTier(energy);
+        IC2Tier tier = getTier(slots);
         return GENERATOR.generate(
                 AdvancedCompressor.class,
                 ADVANCED_COMPRESSOR + slots,
