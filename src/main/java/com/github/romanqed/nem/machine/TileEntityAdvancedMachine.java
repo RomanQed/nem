@@ -28,7 +28,6 @@ import java.util.List;
 public abstract class TileEntityAdvancedMachine<RI, RO, I>
         extends TileEntityElectricMachine
         implements IHasGui, IGuiValueProvider, INetworkTileEntityEventListener, IUpgradableBlock {
-    protected static final NetworkManager NETWORK_MANAGER = IC2.network.get(true);
 
     protected static final int EventStart = 0;
     protected static final int EventInterrupt = 1;
@@ -115,14 +114,14 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
         return output.canAdd(getOutput(ret.getOutput())) ? ret : null;
     }
 
-    private void interruptWork() {
+    private void interruptWork(NetworkManager manager) {
         if (!getActive()) {
             return;
         }
         if (this.progress != 0) {
-            NETWORK_MANAGER.initiateTileEntityEvent(this, EventInterrupt, true);
+            manager.initiateTileEntityEvent(this, EventInterrupt, true);
         } else {
-            NETWORK_MANAGER.initiateTileEntityEvent(this, EventStop, true);
+            manager.initiateTileEntityEvent(this, EventStop, true);
         }
     }
 
@@ -178,9 +177,10 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
     @SuppressWarnings("unchecked")
     protected void updateEntityServer() {
         super.updateEntityServer();
+        NetworkManager manager = IC2.network.get(true);
         // If there is no energy, just stop work
         if (!energy.canUseEnergy(energyConsume)) {
-            interruptWork();
+            interruptWork(manager);
             setActive(false);
             if (upgradeSlot.tickNoMark()) {
                 markDirty();
@@ -200,7 +200,7 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
         }
         // If not, interrupt processing
         if (!hasOutput) {
-            interruptWork();
+            interruptWork(manager);
             progress = 0;
             setActive(false);
             if (upgradeSlot.tickNoMark()) {
@@ -213,7 +213,7 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
         energy.useEnergy(energyConsume);
         setActive(true);
         if (progress == 0) {
-            NETWORK_MANAGER.initiateTileEntityEvent(this, EventStart, true);
+            manager.initiateTileEntityEvent(this, EventStart, true);
         }
         ++progress;
         boolean needsInvUpdate = false;
@@ -221,7 +221,7 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
             operate(outputs);
             needsInvUpdate = true;
             progress = 0;
-            NETWORK_MANAGER.initiateTileEntityEvent(this, EventFinish, true);
+            manager.initiateTileEntityEvent(this, EventFinish, true);
         }
         needsInvUpdate |= this.upgradeSlot.tickNoMark();
         updateGuiProgress();
