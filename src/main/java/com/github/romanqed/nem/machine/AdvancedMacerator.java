@@ -19,7 +19,6 @@ public class AdvancedMacerator extends AbstractDynamicMachine<IRecipeInput, Coll
 
     public AdvancedMacerator(int energyPerTick, int length, int aDefaultTier, int slots) {
         super(energyPerTick, length, aDefaultTier, slots);
-        initAudioSource();
     }
 
     @Override

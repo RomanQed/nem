@@ -43,11 +43,14 @@ public class AdvancedFurnace extends AbstractDynamicMachine<ItemStack, ItemStack
 
     @Override
     protected void initAudioSource() {
+        if (audioSource != null) {
+            return;
+        }
         AudioManager manager = IC2.audioManager;
         this.audioSource = manager.createSource(
                 this,
                 PositionSpec.Center,
-                this.getStartSoundFile(),
+                START_SOUND_FILE,
                 true,
                 false,
                 manager.getDefaultVolume()
@@ -135,6 +138,7 @@ public class AdvancedFurnace extends AbstractDynamicMachine<ItemStack, ItemStack
     }
 
     public void onNetworkEvent(int event) {
+        initAudioSource();
         switch (event) {
             case EventStart:
                 handleStart();

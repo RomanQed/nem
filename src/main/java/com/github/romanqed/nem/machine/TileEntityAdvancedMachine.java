@@ -62,7 +62,6 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
         this.defaultEnergyStorage = energyPerTick * length;
         this.upgradeSlot = new InvSlotUpgrade(this, "upgrade", 4);
         this.comparator.setUpdate(() -> this.progress * 15 / this.operationLength);
-        initAudioSource();
     }
 
     protected void initAudioSource() {
@@ -276,9 +275,7 @@ public abstract class TileEntityAdvancedMachine<RI, RO, I>
     // Networking
     @Override
     public void onNetworkEvent(int event) {
-        if (this.audioSource == null) {
-            return;
-        }
+        initAudioSource();
         switch (event) {
             case EventStart:
                 this.audioSource.play();
