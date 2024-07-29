@@ -4,9 +4,9 @@
     "particle": "nem:blocks/common/back",
     "down": "nem:blocks/common/bottomtop",
     "up": "nem:blocks/common/bottomtop",
-    "north": "nem:blocks/furnace/front",
-    "east": "nem:blocks/common/leftright",
+    "north": "nem:blocks/exctractor/front_active",
+    "east": "nem:blocks/exctractor/leftright_active",
     "south": "nem:blocks/common/back",
-    "west": "nem:blocks/common/leftright"
+    "west": "nem:blocks/exctractor/leftright_active"
   }
 }

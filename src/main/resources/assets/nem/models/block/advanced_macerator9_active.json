@@ -3,8 +3,8 @@
   "textures": {
     "particle": "nem:blocks/common/back",
     "down": "nem:blocks/common/bottomtop",
-    "up": "nem:blocks/common/bottomtop",
-    "north": "nem:blocks/furnace/front_active",
+    "up": "nem:blocks/macerator/top_active",
+    "north": "nem:blocks/macerator/front_active",
     "east": "nem:blocks/common/leftright_active",
     "south": "nem:blocks/common/back",
     "west": "nem:blocks/common/leftright_active"

@@ -16,39 +16,39 @@ import java.util.Set;
 
 public enum NemMachine implements ITeBlock {
     // Furnaces
-    ADVANCED_FURNACE3(MachineUtil.createFurnace(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_FURNACE6(MachineUtil.createFurnace(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_FURNACE9(MachineUtil.createFurnace(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_FURNACE3(MachineUtil.createFurnace(3), EnumRarity.COMMON),
+    ADVANCED_FURNACE6(MachineUtil.createFurnace(6), EnumRarity.UNCOMMON),
+    ADVANCED_FURNACE9(MachineUtil.createFurnace(9), EnumRarity.RARE),
 
     // Macerators
-    ADVANCED_MACERATOR3(MachineUtil.createMacerator(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_MACERATOR6(MachineUtil.createMacerator(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_MACERATOR9(MachineUtil.createMacerator(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_MACERATOR3(MachineUtil.createMacerator(3), EnumRarity.COMMON),
+    ADVANCED_MACERATOR6(MachineUtil.createMacerator(6), EnumRarity.UNCOMMON),
+    ADVANCED_MACERATOR9(MachineUtil.createMacerator(9), EnumRarity.RARE),
 
     // Extractors
-    ADVANCED_EXTRACTOR3(MachineUtil.createExtractor(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_EXTRACTOR6(MachineUtil.createExtractor(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_EXTRACTOR9(MachineUtil.createExtractor(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_EXTRACTOR3(MachineUtil.createExtractor(3), EnumRarity.COMMON),
+    ADVANCED_EXTRACTOR6(MachineUtil.createExtractor(6), EnumRarity.UNCOMMON),
+    ADVANCED_EXTRACTOR9(MachineUtil.createExtractor(9), EnumRarity.RARE),
 
     // Cutters
-    ADVANCED_CUTTER3(MachineUtil.createCutter(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_CUTTER6(MachineUtil.createCutter(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_CUTTER9(MachineUtil.createCutter(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_CUTTER3(MachineUtil.createCutter(3), EnumRarity.COMMON),
+    ADVANCED_CUTTER6(MachineUtil.createCutter(6), EnumRarity.UNCOMMON),
+    ADVANCED_CUTTER9(MachineUtil.createCutter(9), EnumRarity.RARE),
 
     // Extruders
-    ADVANCED_EXTRUDER3(MachineUtil.createExtruder(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_EXTRUDER6(MachineUtil.createExtruder(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_EXTRUDER9(MachineUtil.createExtruder(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_EXTRUDER3(MachineUtil.createExtruder(3), EnumRarity.COMMON),
+    ADVANCED_EXTRUDER6(MachineUtil.createExtruder(6), EnumRarity.UNCOMMON),
+    ADVANCED_EXTRUDER9(MachineUtil.createExtruder(9), EnumRarity.RARE),
 
     // Rollers
-    ADVANCED_ROLLER3(MachineUtil.createRoller(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_ROLLER6(MachineUtil.createRoller(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_ROLLER9(MachineUtil.createRoller(3, 100, 1, 9), EnumRarity.COMMON),
+    ADVANCED_ROLLER3(MachineUtil.createRoller(3), EnumRarity.COMMON),
+    ADVANCED_ROLLER6(MachineUtil.createRoller(6), EnumRarity.UNCOMMON),
+    ADVANCED_ROLLER9(MachineUtil.createRoller(9), EnumRarity.RARE),
 
     // Compressors
-    ADVANCED_COMPRESSOR3(MachineUtil.createCompressor(3, 100, 1, 3), EnumRarity.COMMON),
-    ADVANCED_COMPRESSOR6(MachineUtil.createCompressor(3, 100, 1, 6), EnumRarity.COMMON),
-    ADVANCED_COMPRESSOR9(MachineUtil.createCompressor(3, 100, 1, 9), EnumRarity.COMMON);
+    ADVANCED_COMPRESSOR3(MachineUtil.createCompressor(3), EnumRarity.COMMON),
+    ADVANCED_COMPRESSOR6(MachineUtil.createCompressor(6), EnumRarity.UNCOMMON),
+    ADVANCED_COMPRESSOR9(MachineUtil.createCompressor(9), EnumRarity.RARE);
 
 
     public static final ResourceLocation IDENTIFIER = new ResourceLocation(NemMod.MODID, "machine");
@@ -160,6 +160,7 @@ public enum NemMachine implements ITeBlock {
 
     @Nullable
     @Override
+    @SuppressWarnings("deprecation")
     public TileEntityBlock getDummyTe() {
         return dummyTe;
     }

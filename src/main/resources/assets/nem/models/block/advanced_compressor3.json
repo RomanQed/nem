@@ -4,7 +4,7 @@
     "particle": "nem:blocks/common/back",
     "down": "nem:blocks/common/bottomtop",
     "up": "nem:blocks/common/bottomtop",
-    "north": "nem:blocks/furnace/front",
+    "north": "nem:blocks/compressor/front",
     "east": "nem:blocks/common/leftright",
     "south": "nem:blocks/common/back",
     "west": "nem:blocks/common/leftright"
