@@ -49,6 +49,6 @@ public class AdvancedCompressor extends AbstractDynamicMachine<IRecipeInput, Col
 
     @Override
     public Set<UpgradableProperty> getUpgradableProperties() {
-        return Constants.PROPERTIES;
+        return Constants.MACHINE_PROPERTIES;
     }
 }

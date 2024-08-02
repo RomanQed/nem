@@ -28,5 +28,9 @@ nem.machine.advanced_compressor3=Сжимательный завод
 nem.machine.advanced_compressor6=Продвинутый сжимательный завод
 nem.machine.advanced_compressor9=Улучшенный сжимательный завод
 
+nem.machine.advanced_recycler3=Переработочный завод
+nem.machine.advanced_recycler6=Продвинутый переработочный завод
+nem.machine.advanced_recycler9=Улучшенный переработочный завод
+
 nem.generator.advanced_kinetic_generator=Продвинутый кинетический генератор
 nem.generator.super_kinetic_generator=Улучшенный кинетический генератор

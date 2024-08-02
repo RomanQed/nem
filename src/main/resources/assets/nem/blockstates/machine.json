@@ -127,6 +127,24 @@
       },
       "advanced_compressor9_active": {
         "model": "nem:advanced_compressor9_active"
+      },
+      "advanced_recycler3": {
+        "model": "nem:advanced_recycler3"
+      },
+      "advanced_recycler6": {
+        "model": "nem:advanced_recycler6"
+      },
+      "advanced_recycler9": {
+        "model": "nem:advanced_recycler9"
+      },
+      "advanced_recycler3_active": {
+        "model": "nem:advanced_recycler3_active"
+      },
+      "advanced_recycler6_active": {
+        "model": "nem:advanced_recycler6_active"
+      },
+      "advanced_recycler9_active": {
+        "model": "nem:advanced_recycler9_active"
       }
     },
     "facing": {
