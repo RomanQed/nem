@@ -25,6 +25,10 @@ public final class NemConfig {
     @Config.RequiresMcRestart
     public static double naturalEffective = 0.5;
 
+    @Config.RangeInt(min = 1, max = 100)
+    @Config.RequiresMcRestart
+    public static int recycleChance = 15;
+
     @Config.RequiresMcRestart
     public static boolean enableMachines = true;
 

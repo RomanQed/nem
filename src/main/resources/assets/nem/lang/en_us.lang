@@ -28,5 +28,9 @@ nem.machine.advanced_compressor3=Compression machine
 nem.machine.advanced_compressor6=Advanced compression machine
 nem.machine.advanced_compressor9=Improved compression machine
 
+nem.machine.advanced_recycler3=Recycling machine
+nem.machine.advanced_recycler6=Advanced recycling machine
+nem.machine.advanced_recycler9=Improved recycling machine
+
 nem.generator.advanced_kinetic_generator=Advanced kinetic generator
 nem.generator.super_kinetic_generator=Improved kinetic generator

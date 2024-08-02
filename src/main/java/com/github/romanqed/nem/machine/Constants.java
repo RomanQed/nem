@@ -6,7 +6,7 @@ import java.util.EnumSet;
 import java.util.Set;
 
 final class Constants {
-    public static final Set<UpgradableProperty> PROPERTIES = EnumSet.of(
+    public static final Set<UpgradableProperty> MACHINE_PROPERTIES = EnumSet.of(
             UpgradableProperty.Processing,
             UpgradableProperty.Transformer,
             UpgradableProperty.EnergyStorage,

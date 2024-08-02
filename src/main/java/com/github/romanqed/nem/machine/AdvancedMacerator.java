@@ -75,6 +75,6 @@ public class AdvancedMacerator extends AbstractDynamicMachine<IRecipeInput, Coll
 
     @Override
     public Set<UpgradableProperty> getUpgradableProperties() {
-        return Constants.PROPERTIES;
+        return Constants.MACHINE_PROPERTIES;
     }
 }

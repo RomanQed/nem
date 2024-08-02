@@ -48,7 +48,12 @@ public enum NemMachine implements ITeBlock {
     // Compressors
     ADVANCED_COMPRESSOR3(MachineUtil.createCompressor(3), EnumRarity.COMMON),
     ADVANCED_COMPRESSOR6(MachineUtil.createCompressor(6), EnumRarity.UNCOMMON),
-    ADVANCED_COMPRESSOR9(MachineUtil.createCompressor(9), EnumRarity.RARE);
+    ADVANCED_COMPRESSOR9(MachineUtil.createCompressor(9), EnumRarity.RARE),
+
+    // Recyclers
+    ADVANCED_RECYCLER3(MachineUtil.createRecycler(3), EnumRarity.COMMON),
+    ADVANCED_RECYCLER6(MachineUtil.createRecycler(6), EnumRarity.UNCOMMON),
+    ADVANCED_RECYCLER9(MachineUtil.createRecycler(9), EnumRarity.RARE);
 
     public static final ResourceLocation IDENTIFIER = new ResourceLocation(NemMod.MODID, "machine");
 
