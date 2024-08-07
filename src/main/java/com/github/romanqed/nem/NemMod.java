@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 public final class NemMod {
     public static final String MODID = "nem";
     public static final String NAME = "Not Enough Machines";
-    public static final String VERSION = "1.0";
+    public static final String VERSION = "1.2";
     public static final CreativeTab CREATIVE_TAB = new CreativeTab(MODID);
 
     private static Logger logger;
@@ -73,7 +73,7 @@ public final class NemMod {
             return NemMachine.ADVANCED_FURNACE3;
         }
         if (NemConfig.enableGenerators) {
-            return NemGenerator.ADVANCED_KINETIC_GENERATOR;
+            return NemGenerator.REACTOR_KINETIC_GENERATOR;
         }
         return TeBlock.iron_furnace;
     }

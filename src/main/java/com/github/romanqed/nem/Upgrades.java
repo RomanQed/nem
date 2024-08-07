@@ -1,11 +1,11 @@
-package com.github.romanqed.nem.machine;
+package com.github.romanqed.nem;
 
 import ic2.api.upgrade.UpgradableProperty;
 
 import java.util.EnumSet;
 import java.util.Set;
 
-final class Constants {
+public final class Upgrades {
     public static final Set<UpgradableProperty> MACHINE_PROPERTIES = EnumSet.of(
             UpgradableProperty.Processing,
             UpgradableProperty.Transformer,
@@ -14,6 +14,13 @@ final class Constants {
             UpgradableProperty.ItemProducing
     );
 
-    private Constants() {
+    public static final Set<UpgradableProperty> STIRLING_PROPERTIES = EnumSet.of(
+            UpgradableProperty.ItemConsuming,
+            UpgradableProperty.ItemProducing,
+            UpgradableProperty.FluidConsuming,
+            UpgradableProperty.FluidProducing
+    );
+
+    private Upgrades() {
     }
 }

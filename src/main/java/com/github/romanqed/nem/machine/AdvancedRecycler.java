@@ -1,5 +1,6 @@
 package com.github.romanqed.nem.machine;
 
+import com.github.romanqed.nem.Upgrades;
 import com.github.romanqed.nem.config.NemConfig;
 import ic2.api.recipe.IMachineRecipeManager;
 import ic2.api.recipe.IRecipeInput;
@@ -65,6 +66,6 @@ public class AdvancedRecycler extends AbstractDynamicMachine<IRecipeInput, Colle
 
     @Override
     public Set<UpgradableProperty> getUpgradableProperties() {
-        return Constants.MACHINE_PROPERTIES;
+        return Upgrades.MACHINE_PROPERTIES;
     }
 }

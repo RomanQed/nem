@@ -2,17 +2,17 @@
   "forge_marker": 1,
   "variants": {
     "type": {
-      "advanced_kinetic_generator": {
-        "model": "nem:advanced_kinetic_generator"
+      "reactor_stirling_generator": {
+        "model": "nem:generator/reactor_stirling_generator"
       },
-      "advanced_kinetic_generator_active": {
-        "model": "nem:advanced_kinetic_generator_active"
+      "reactor_stirling_generator_active": {
+        "model": "nem:generator/reactor_stirling_generator_active"
       },
-      "super_kinetic_generator": {
-        "model": "nem:super_kinetic_generator"
+      "reactor_kinetic_generator": {
+        "model": "nem:generator/reactor_kinetic_generator"
       },
-      "super_kinetic_generator_active": {
-        "model": "nem:super_kinetic_generator_active"
+      "reactor_kinetic_generator_active": {
+        "model": "nem:generator/reactor_kinetic_generator_active"
       }
     },
     "facing": {
