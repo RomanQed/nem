@@ -1,18 +1,18 @@
 package com.github.romanqed.nem.generator;
 
+import com.github.romanqed.nem.config.NemConfig;
 import ic2.api.energy.tile.IKineticSource;
-import ic2.core.block.kineticgenerator.tileentity.TileEntityStirlingKineticGenerator;
 import ic2.core.block.kineticgenerator.tileentity.TileEntityWaterKineticGenerator;
 import ic2.core.block.kineticgenerator.tileentity.TileEntityWindKineticGenerator;
 
-public class CommonKineticGenerator extends TileEntityAdvancedKineticGenerator {
+public class ReactorKineticGenerator extends TileEntityAdvancedKineticGenerator {
     private final double naturalEffective;
     private final double reactorEffective;
 
-    public CommonKineticGenerator(double multiplier, double naturalEffective, double reactorEffective) {
-        super(multiplier);
-        this.naturalEffective = naturalEffective;
-        this.reactorEffective = reactorEffective;
+    public ReactorKineticGenerator() {
+        super(NemConfig.reactorKineticMultiplier);
+        this.naturalEffective = NemConfig.naturalEffective;
+        this.reactorEffective = NemConfig.reactorEffective;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class CommonKineticGenerator extends TileEntityAdvancedKineticGenerator {
         if (clazz == TileEntityWaterKineticGenerator.class || clazz == TileEntityWindKineticGenerator.class) {
             return naturalEffective;
         }
-        if (clazz == TileEntityStirlingKineticGenerator.class) {
+        if (clazz == ReactorStirlingGenerator.class) {
             return reactorEffective;
         }
         return 0.01;

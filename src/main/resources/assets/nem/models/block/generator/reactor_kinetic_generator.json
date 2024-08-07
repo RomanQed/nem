@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nem:blocks/reactor_kinetic_generator/leftright",
+    "down": "nem:blocks/reactor_kinetic_generator/top",
+    "up": "nem:blocks/reactor_kinetic_generator/bottom",
+    "north": "nem:blocks/reactor_kinetic_generator/front",
+    "south": "nem:blocks/reactor_kinetic_generator/back",
+    "west": "nem:blocks/reactor_kinetic_generator/leftright",
+    "east": "nem:blocks/reactor_kinetic_generator/leftright"
+  }
+}

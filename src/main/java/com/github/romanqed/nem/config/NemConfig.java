@@ -11,15 +11,11 @@ public final class NemConfig {
 
     @Config.RangeDouble(min = 0.01, max = 100)
     @Config.RequiresMcRestart
-    public static double advancedKineticMultiplier = 0.85;
+    public static double reactorKineticMultiplier = 1;
 
     @Config.RangeDouble(min = 0.01, max = 100)
     @Config.RequiresMcRestart
-    public static double superKineticMultiplier = 1.2;
-
-    @Config.RangeDouble(min = 0.01, max = 100)
-    @Config.RequiresMcRestart
-    public static double reactorEffective = 20;
+    public static double reactorEffective = 25;
 
     @Config.RangeDouble(min = 0.01, max = 100)
     @Config.RequiresMcRestart

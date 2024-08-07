@@ -3,148 +3,148 @@
   "variants": {
     "type": {
       "advanced_furnace3": {
-        "model": "nem:advanced_furnace3"
+        "model": "nem:machine/advanced_furnace3"
       },
       "advanced_furnace6": {
-        "model": "nem:advanced_furnace6"
+        "model": "nem:machine/advanced_furnace6"
       },
       "advanced_furnace9": {
-        "model": "nem:advanced_furnace9"
+        "model": "nem:machine/advanced_furnace9"
       },
       "advanced_furnace3_active": {
-        "model": "nem:advanced_furnace3_active"
+        "model": "nem:machine/advanced_furnace3_active"
       },
       "advanced_furnace6_active": {
-        "model": "nem:advanced_furnace6_active"
+        "model": "nem:machine/advanced_furnace6_active"
       },
       "advanced_furnace9_active": {
-        "model": "nem:advanced_furnace9_active"
+        "model": "nem:machine/advanced_furnace9_active"
       },
       "advanced_macerator3": {
-        "model": "nem:advanced_macerator3"
+        "model": "nem:machine/advanced_macerator3"
       },
       "advanced_macerator6": {
-        "model": "nem:advanced_macerator6"
+        "model": "nem:machine/advanced_macerator6"
       },
       "advanced_macerator9": {
-        "model": "nem:advanced_macerator9"
+        "model": "nem:machine/advanced_macerator9"
       },
       "advanced_macerator3_active": {
-        "model": "nem:advanced_macerator3_active"
+        "model": "nem:machine/advanced_macerator3_active"
       },
       "advanced_macerator6_active": {
-        "model": "nem:advanced_macerator6_active"
+        "model": "nem:machine/advanced_macerator6_active"
       },
       "advanced_macerator9_active": {
-        "model": "nem:advanced_macerator9_active"
+        "model": "nem:machine/advanced_macerator9_active"
       },
       "advanced_extractor3": {
-        "model": "nem:advanced_extractor3"
+        "model": "nem:machine/advanced_extractor3"
       },
       "advanced_extractor6": {
-        "model": "nem:advanced_extractor6"
+        "model": "nem:machine/advanced_extractor6"
       },
       "advanced_extractor9": {
-        "model": "nem:advanced_extractor9"
+        "model": "nem:machine/advanced_extractor9"
       },
       "advanced_extractor3_active": {
-        "model": "nem:advanced_extractor3_active"
+        "model": "nem:machine/advanced_extractor3_active"
       },
       "advanced_extractor6_active": {
-        "model": "nem:advanced_extractor6_active"
+        "model": "nem:machine/advanced_extractor6_active"
       },
       "advanced_extractor9_active": {
-        "model": "nem:advanced_extractor9_active"
+        "model": "nem:machine/advanced_extractor9_active"
       },
       "advanced_cutter3": {
-        "model": "nem:advanced_cutter3"
+        "model": "nem:machine/advanced_cutter3"
       },
       "advanced_cutter6": {
-        "model": "nem:advanced_cutter6"
+        "model": "nem:machine/advanced_cutter6"
       },
       "advanced_cutter9": {
-        "model": "nem:advanced_cutter9"
+        "model": "nem:machine/advanced_cutter9"
       },
       "advanced_cutter3_active": {
-        "model": "nem:advanced_cutter3_active"
+        "model": "nem:machine/advanced_cutter3_active"
       },
       "advanced_cutter6_active": {
-        "model": "nem:advanced_cutter6_active"
+        "model": "nem:machine/advanced_cutter6_active"
       },
       "advanced_cutter9_active": {
-        "model": "nem:advanced_cutter9_active"
+        "model": "nem:machine/advanced_cutter9_active"
       },
       "advanced_extruder3": {
-        "model": "nem:advanced_extruder3"
+        "model": "nem:machine/advanced_extruder3"
       },
       "advanced_extruder6": {
-        "model": "nem:advanced_extruder6"
+        "model": "nem:machine/advanced_extruder6"
       },
       "advanced_extruder9": {
-        "model": "nem:advanced_extruder9"
+        "model": "nem:machine/advanced_extruder9"
       },
       "advanced_extruder3_active": {
-        "model": "nem:advanced_extruder3_active"
+        "model": "nem:machine/advanced_extruder3_active"
       },
       "advanced_extruder6_active": {
-        "model": "nem:advanced_extruder6_active"
+        "model": "nem:machine/advanced_extruder6_active"
       },
       "advanced_extruder9_active": {
-        "model": "nem:advanced_extruder9_active"
+        "model": "nem:machine/advanced_extruder9_active"
       },
       "advanced_roller3": {
-        "model": "nem:advanced_roller3"
+        "model": "nem:machine/advanced_roller3"
       },
       "advanced_roller6": {
-        "model": "nem:advanced_roller6"
+        "model": "nem:machine/advanced_roller6"
       },
       "advanced_roller9": {
-        "model": "nem:advanced_roller9"
+        "model": "nem:machine/advanced_roller9"
       },
       "advanced_roller3_active": {
-        "model": "nem:advanced_roller3_active"
+        "model": "nem:machine/advanced_roller3_active"
       },
       "advanced_roller6_active": {
-        "model": "nem:advanced_roller6_active"
+        "model": "nem:machine/advanced_roller6_active"
       },
       "advanced_roller9_active": {
-        "model": "nem:advanced_roller9_active"
+        "model": "nem:machine/advanced_roller9_active"
       },
       "advanced_compressor3": {
-        "model": "nem:advanced_compressor3"
+        "model": "nem:machine/advanced_compressor3"
       },
       "advanced_compressor6": {
-        "model": "nem:advanced_compressor6"
+        "model": "nem:machine/advanced_compressor6"
       },
       "advanced_compressor9": {
-        "model": "nem:advanced_compressor9"
+        "model": "nem:machine/advanced_compressor9"
       },
       "advanced_compressor3_active": {
-        "model": "nem:advanced_compressor3_active"
+        "model": "nem:machine/advanced_compressor3_active"
       },
       "advanced_compressor6_active": {
-        "model": "nem:advanced_compressor6_active"
+        "model": "nem:machine/advanced_compressor6_active"
       },
       "advanced_compressor9_active": {
-        "model": "nem:advanced_compressor9_active"
+        "model": "nem:machine/advanced_compressor9_active"
       },
       "advanced_recycler3": {
-        "model": "nem:advanced_recycler3"
+        "model": "nem:machine/advanced_recycler3"
       },
       "advanced_recycler6": {
-        "model": "nem:advanced_recycler6"
+        "model": "nem:machine/advanced_recycler6"
       },
       "advanced_recycler9": {
-        "model": "nem:advanced_recycler9"
+        "model": "nem:machine/advanced_recycler9"
       },
       "advanced_recycler3_active": {
-        "model": "nem:advanced_recycler3_active"
+        "model": "nem:machine/advanced_recycler3_active"
       },
       "advanced_recycler6_active": {
-        "model": "nem:advanced_recycler6_active"
+        "model": "nem:machine/advanced_recycler6_active"
       },
       "advanced_recycler9_active": {
-        "model": "nem:advanced_recycler9_active"
+        "model": "nem:machine/advanced_recycler9_active"
       }
     },
     "facing": {

@@ -32,5 +32,5 @@ nem.machine.advanced_recycler3=Переработочный завод
 nem.machine.advanced_recycler6=Продвинутый переработочный завод
 nem.machine.advanced_recycler9=Улучшенный переработочный завод
 
-nem.generator.advanced_kinetic_generator=Продвинутый кинетический генератор
-nem.generator.super_kinetic_generator=Улучшенный кинетический генератор
+nem.generator.reactor_kinetic_generator=Реакторный кинетический генератор
+nem.generator.reactor_stirling_generator=Реакторный генератор Стирлинга

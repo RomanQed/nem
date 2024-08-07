@@ -1,5 +1,6 @@
 package com.github.romanqed.nem.machine;
 
+import com.github.romanqed.nem.Upgrades;
 import ic2.api.recipe.IMachineRecipeManager;
 import ic2.api.recipe.IRecipeInput;
 import ic2.api.recipe.Recipes;
@@ -49,6 +50,6 @@ public class AdvancedExtractor extends AbstractDynamicMachine<IRecipeInput, Coll
 
     @Override
     public Set<UpgradableProperty> getUpgradableProperties() {
-        return Constants.MACHINE_PROPERTIES;
+        return Upgrades.MACHINE_PROPERTIES;
     }
 }

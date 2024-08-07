@@ -1,7 +1,7 @@
 package com.github.romanqed.nem;
 
-import com.github.romanqed.nem.generator.AdvancedKineticGenerator;
-import com.github.romanqed.nem.generator.SuperKineticGenerator;
+import com.github.romanqed.nem.generator.ReactorKineticGenerator;
+import com.github.romanqed.nem.generator.ReactorStirlingGenerator;
 import ic2.core.block.ITeBlock;
 import ic2.core.block.TileEntityBlock;
 import ic2.core.ref.IC2Material;
@@ -17,8 +17,8 @@ import javax.annotation.Nullable;
 import java.util.Set;
 
 public enum NemGenerator implements ITeBlock {
-    ADVANCED_KINETIC_GENERATOR(AdvancedKineticGenerator.class, EnumRarity.UNCOMMON),
-    SUPER_KINETIC_GENERATOR(SuperKineticGenerator.class, EnumRarity.RARE);
+    REACTOR_STIRLING_GENERATOR(ReactorStirlingGenerator.class, EnumRarity.UNCOMMON),
+    REACTOR_KINETIC_GENERATOR(ReactorKineticGenerator.class, EnumRarity.UNCOMMON);
 
     public static final ResourceLocation IDENTIFIER = new ResourceLocation(NemMod.MODID, "generator");
 

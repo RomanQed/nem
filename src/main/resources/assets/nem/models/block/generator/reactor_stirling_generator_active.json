@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "nem:blocks/reactor_stirling_generator/leftrightback_active",
+    "down": "nem:blocks/reactor_stirling_generator/bottomtop_active",
+    "up": "nem:blocks/reactor_stirling_generator/bottomtop_active",
+    "north": "nem:blocks/reactor_stirling_generator/front",
+    "east": "nem:blocks/reactor_stirling_generator/leftrightback_active",
+    "south": "nem:blocks/reactor_stirling_generator/leftrightback_active",
+    "west": "nem:blocks/reactor_stirling_generator/leftrightback_active"
+  }
+}
